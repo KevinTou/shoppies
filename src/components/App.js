@@ -1,11 +1,22 @@
 import React from 'react';
 
-function App() {
+import SearchBar from './SearchBar';
+import MovieContainer from './MovieContainer';
+import NominationsFooter from './NominationsFooter';
+
+const App = () => {
   return (
     <>
-      <h1>App</h1>
+      <main className="main-container">
+        <section className="main-hero">
+          <h1 className="main-title">The Shoppies</h1>
+          <SearchBar />
+          <MovieContainer />
+        </section>
+      </main>
+      <NominationsFooter />
     </>
   );
-}
+};
 
 export default App;
