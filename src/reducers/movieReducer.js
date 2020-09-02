@@ -1,8 +1,9 @@
 import {} from '../actions';
 
 const initialState = {
-  movies: [],
+  movies: [1, 2, 3],
   movie: {},
+  nominations: [],
   isLoading: false,
   error: null,
 };
