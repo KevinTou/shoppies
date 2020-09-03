@@ -24,8 +24,16 @@ export const searchMovies = (query) => async (dispatch) => {
       `http://www.omdbapi.com/?s=${query}&apikey=${process.env.REACT_APP_KEY}`
     );
 
+    let cache = new Set();
+
     let movies = await Promise.all(
       data.Search.map(async (movie) => {
+        if (cache.has(movie.Title)) {
+          return;
+        } else {
+          cache.add(movie.Title);
+        }
+
         try {
           let img = await axios.get(
             `http://img.omdbapi.com/?i=${movie.imdbID}&apikey=${process.env.REACT_APP_KEY}`,
@@ -47,9 +55,10 @@ export const searchMovies = (query) => async (dispatch) => {
       })
     );
 
-    console.log('movies: ', movies);
-
-    dispatch({ type: SEARCH_MOVIES_SUCCESS, payload: movies });
+    dispatch({
+      type: SEARCH_MOVIES_SUCCESS,
+      payload: movies.filter((m) => m !== undefined),
+    });
   } catch (err) {
     dispatch({ type: SEARCH_MOVIES_ERROR, payload: err });
   }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import Swiper from 'react-id-swiper';
 
 import Movie from './Movie';
 
@@ -38,8 +37,8 @@ const MovieContainer = ({ movies }) => {
   return (
     <Swiper {...params}>
       {movies.length > 0 ? (
-        movies.map((movie, index) => (
-          <SwiperSlide key={index}>
+        movies.map((movie) => (
+          <SwiperSlide key={movie.imdbID}>
             <Movie movie={movie} />
           </SwiperSlide>
         ))
