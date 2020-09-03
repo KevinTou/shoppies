@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'swiper/swiper-bundle.css';
 import './index.css';
 import App from './components/App';
 
