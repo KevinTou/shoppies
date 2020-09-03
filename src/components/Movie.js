@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import { nominateMovie } from '../actions';
 
-const Movie = ({ movie, nominateMovie }) => {
+const Movie = ({ movie, nominations, nominateMovie }) => {
   const [displayTitle, setDisplayTitle] = useState(false);
+  const [nominated, setNominated] = useState(false);
+
+  useEffect(() => {
+    let index = _.findIndex(nominations, function (o) {
+      return o.Title === movie.Title;
+    });
+
+    if (index >= 0) {
+      setNominated(true);
+    } else {
+      setNominated(false);
+    }
+  }, [nominations, movie]);
 
   const handleClick = (e) => {
-    nominateMovie(movie);
+    if (nominations.length < 5) {
+      nominateMovie(movie);
+    }
   };
 
   const showTitle = (e) => {
@@ -37,11 +53,23 @@ const Movie = ({ movie, nominateMovie }) => {
           />
         )}
       </div>
-      <button className="movie-nomination-button" onClick={handleClick}>
-        Nominate
-      </button>
+      {nominated ? (
+        <p className="movie-detail-nominated">Nominated</p>
+      ) : (
+        <button className="movie-detail-button" onClick={handleClick}>
+          Nominate
+        </button>
+      )}
     </div>
   );
 };
 
-export default connect(null, { nominateMovie })(Movie);
+const mapStateToProps = (state) => {
+  const { nominations } = state.movies;
+
+  return {
+    nominations,
+  };
+};
+
+export default connect(mapStateToProps, { nominateMovie })(Movie);
