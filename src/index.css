@@ -163,6 +163,29 @@ body {
   font-size: 0.9rem;
 }
 
+/* MOVIE CARD */
+
+.movie-detail-wrapper {
+  height: 230px;
+}
+
+.movie-detail-image {
+  height: 100%;
+  max-width: 150px;
+}
+
+.movie-nomination-button {
+  margin-top: 0.8rem;
+  border-radius: 6px;
+  background-color: #c43256;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  width: 150px;
+  padding: 1rem 0;
+}
+
 /* SEARCH BAR */
 
 .search-form {
@@ -201,6 +224,12 @@ body {
   border-bottom-right-radius: 24px;
 }
 
+@media screen and (min-width: 600px) {
+  .search-form-bar {
+    padding-right: 10rem;
+  }
+}
+
 /* FOOTER */
 
 .footer-nominations-container {
@@ -218,4 +247,10 @@ body {
 .footer-nominations-display {
   font-weight: bold;
   font-size: 1.6rem;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-nominations-container {
+    height: 300px; /*Fix this*/
+  }
 }
