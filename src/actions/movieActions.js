@@ -21,7 +21,7 @@ export const searchMovies = (query) => async (dispatch) => {
 
   try {
     let { data } = await axios.get(
-      `http://www.omdbapi.com/?s=${query}&apikey=${process.env.REACT_APP_KEY}`
+      `http://www.omdbapi.com/?s=${query}&type=movie&apikey=${process.env.REACT_APP_KEY}`
     );
 
     let cache = new Set();
