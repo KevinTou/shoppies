@@ -1,31 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
+// import Swiper from 'react-id-swiper';
 
 import Movie from './Movie';
 
-const params = {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    slideShadows: true,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-  },
-};
-
 const MovieContainer = ({ movies }) => {
+  const params = {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  };
+
   return (
-    <Swiper spaceBetween={0} slidesPerView={2}>
+    <Swiper {...params}>
       {movies.length > 0 ? (
-        movies.map((movie) => (
-          <SwiperSlide key={movie}>
+        movies.map((movie, index) => (
+          <SwiperSlide key={index} style={{ maxWidth: '200px' }}>
             <Movie movie={movie} />
           </SwiperSlide>
         ))

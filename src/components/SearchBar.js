@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { searchMovies } from '../actions';
 
-const SearchBar = () => {
+const SearchBar = ({ searchMovies }) => {
   const [search, setSearch] = useState('');
 
   const handleChange = (e) => {
@@ -10,7 +12,9 @@ const SearchBar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('I was clicked');
+    if (!search) return;
+
+    searchMovies(search);
   };
 
   return (
@@ -29,4 +33,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default connect(null, { searchMovies })(SearchBar);
