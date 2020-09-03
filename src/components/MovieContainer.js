@@ -13,6 +13,25 @@ const MovieContainer = ({ movies }) => {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
     },
   };
 
@@ -20,7 +39,7 @@ const MovieContainer = ({ movies }) => {
     <Swiper {...params}>
       {movies.length > 0 ? (
         movies.map((movie, index) => (
-          <SwiperSlide key={index} style={{ maxWidth: '200px' }}>
+          <SwiperSlide key={index}>
             <Movie movie={movie} />
           </SwiperSlide>
         ))
