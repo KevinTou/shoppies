@@ -43,13 +43,17 @@ const Movie = ({ movie, nominations, nominateMovie }) => {
         {displayTitle ? (
           <div>
             <h3>{movie.Title}</h3>
-            <p>({movie.Year})</p>
+            <p style={{ marginTop: '.3rem' }}>({movie.Year})</p>
           </div>
         ) : (
           <img
             src={movie.image ? URL.createObjectURL(movie.image) : movie.Poster}
             alt={movie.Title}
             className="movie-detail-image"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = 'https://i.stack.imgur.com/yZlqh.png';
+            }}
           />
         )}
       </div>
