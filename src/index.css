@@ -167,6 +167,10 @@ body {
 
 .movie-detail-wrapper {
   height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .movie-detail-image {
@@ -174,7 +178,7 @@ body {
   max-width: 150px;
 }
 
-.movie-nomination-button {
+.movie-detail-button {
   margin-top: 0.8rem;
   border-radius: 6px;
   background-color: #c43256;
@@ -184,6 +188,16 @@ body {
   border: none;
   width: 150px;
   padding: 1rem 0;
+}
+
+.movie-detail-nominated {
+  margin-top: 0.8rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 150px;
+  padding: 1.8rem 0;
+  margin: 0 auto;
 }
 
 /* SEARCH BAR */
