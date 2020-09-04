@@ -27,7 +27,7 @@ export const searchMovies = (query) => async (dispatch) => {
 
   try {
     let { data } = await axios.get(
-      `http://www.omdbapi.com/?s=${query}&type=movie&apikey=${process.env.REACT_APP_KEY}`
+      `https://www.omdbapi.com/?s=${query}&type=movie&apikey=${process.env.REACT_APP_KEY}`
     );
 
     let cache = new Set();
@@ -42,7 +42,7 @@ export const searchMovies = (query) => async (dispatch) => {
 
         try {
           let img = await axios.get(
-            `http://img.omdbapi.com/?i=${movie.imdbID}&apikey=${process.env.REACT_APP_KEY}`,
+            `https://img.omdbapi.com/?i=${movie.imdbID}&apikey=${process.env.REACT_APP_KEY}`,
             {
               responseType: 'blob',
             }
