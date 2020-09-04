@@ -3,10 +3,12 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import MovieContainer from './MovieContainer';
 import NominationsFooter from './NominationsFooter';
+import ConfettiBanner from './ConfettiBanner';
 
 const App = () => {
   return (
     <>
+      <ConfettiBanner />
       <main className="main-container">
         <section className="main-hero">
           <h1 className="main-title">The Shoppies</h1>
