@@ -12,6 +12,12 @@ export const removeNomination = (movie) => (dispatch) => {
   dispatch({ type: REMOVE_NOMINATION, payload: movie });
 };
 
+export const REMOVE_ALL_NOMINATIONS = 'REMOVE_ALL_NOMINATIONS';
+
+export const removeAllNominations = () => (dispatch) => {
+  dispatch({ type: REMOVE_ALL_NOMINATIONS });
+};
+
 export const SEARCH_MOVIES = 'SEARCH_MOVIES';
 export const SEARCH_MOVIES_SUCCESS = 'SEARCH_MOVIES_SUCCESS';
 export const SEARCH_MOVIES_ERROR = 'SEARCH_MOVIES_ERROR';

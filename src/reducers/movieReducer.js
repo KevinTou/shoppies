@@ -5,6 +5,7 @@ import {
   SEARCH_MOVIES,
   SEARCH_MOVIES_SUCCESS,
   SEARCH_MOVIES_ERROR,
+  REMOVE_ALL_NOMINATIONS,
 } from '../actions';
 
 const initialState = {
@@ -47,6 +48,11 @@ export default function (state = initialState, action) {
             (movie) => !_.isEqual(movie, action.payload)
           ),
         ],
+      };
+    case REMOVE_ALL_NOMINATIONS:
+      return {
+        ...state,
+        nominations: [],
       };
     default:
       return state;
