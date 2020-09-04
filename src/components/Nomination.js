@@ -26,7 +26,7 @@ const Nomination = ({ nomination, removeNomination }) => {
         onClick={handleClick}
       >
         {displayTitle ? (
-          <div className="movie-detail">
+          <div className="movie-detail nomination">
             <h3>{nomination.Title}</h3>
             <p style={{ marginTop: '.3rem' }}>({nomination.Year})</p>
           </div>
@@ -38,7 +38,7 @@ const Nomination = ({ nomination, removeNomination }) => {
                 : nomination.Poster
             }
             alt={nomination.Title}
-            className="movie-detail-image"
+            className="movie-detail-image nomination"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = 'https://i.stack.imgur.com/yZlqh.png';

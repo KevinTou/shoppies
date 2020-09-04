@@ -177,7 +177,6 @@ body {
   height: 100%;
   width: 150px;
   margin: 0 1rem;
-  cursor: pointer;
 }
 
 .movie-detail {
@@ -190,6 +189,9 @@ body {
   text-align: center;
   margin: 0 1rem;
   background-color: transparent;
+}
+
+.nomination {
   cursor: pointer;
 }
 
@@ -271,6 +273,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-nominations {
+  display: flex;
 }
 
 .footer-nominations-display {
