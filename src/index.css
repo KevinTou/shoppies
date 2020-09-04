@@ -175,7 +175,22 @@ body {
 
 .movie-detail-image {
   height: 100%;
-  max-width: 150px;
+  width: 150px;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.movie-detail {
+  height: 100%;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 1rem;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .movie-detail-button {
@@ -261,6 +276,15 @@ body {
 .footer-nominations-display {
   font-weight: bold;
   font-size: 1.6rem;
+  margin-right: 2rem;
+}
+
+.footer-nominations-button-remove {
+  height: 230px;
+  width: 150px;
+  margin: 0 1rem;
+  background-color: transparent;
+  border: none;
 }
 
 @media screen and (min-width: 600px) {

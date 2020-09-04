@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {
   NOMINATE_MOVIE,
   REMOVE_NOMINATION,
@@ -41,9 +42,11 @@ export default function (state = initialState, action) {
     case REMOVE_NOMINATION:
       return {
         ...state,
-        nominations: state.nominations.filter(
-          (movie) => movie === action.payload
-        ),
+        nominations: [
+          ...state.nominations.filter(
+            (movie) => !_.isEqual(movie, action.payload)
+          ),
+        ],
       };
     default:
       return state;

@@ -41,7 +41,7 @@ const Movie = ({ movie, nominations, nominateMovie }) => {
         onMouseLeave={removeTitle}
       >
         {displayTitle ? (
-          <div>
+          <div className="movie-detail">
             <h3>{movie.Title}</h3>
             <p style={{ marginTop: '.3rem' }}>({movie.Year})</p>
           </div>
