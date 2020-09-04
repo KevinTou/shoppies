@@ -14,7 +14,7 @@ const NominationsFooter = ({ nominations, removeAllNominations }) => {
         ))}
         {nominations.length > 0 && (
           <button
-            className="footer-nominations-button-remove"
+            className="footer-nominations-button-remove nomination"
             onClick={removeAllNominations}
           >
             Remove All

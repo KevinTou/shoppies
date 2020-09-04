@@ -60,7 +60,10 @@ const Movie = ({ movie, nominations, nominateMovie }) => {
       {nominated ? (
         <p className="movie-detail-nominated">Nominated</p>
       ) : (
-        <button className="movie-detail-button" onClick={handleClick}>
+        <button
+          className="movie-detail-button nomination"
+          onClick={handleClick}
+        >
           Nominate
         </button>
       )}

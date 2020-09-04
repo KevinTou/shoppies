@@ -288,6 +288,12 @@ body {
   margin: 0 1rem;
   background-color: transparent;
   border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.footer-nominations-button-remove:hover {
+  /* background-color: #7d1c34; */
 }
 
 @media screen and (min-width: 600px) {

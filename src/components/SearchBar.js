@@ -19,7 +19,7 @@ const SearchBar = ({ searchMovies }) => {
 
   return (
     <form className="search-form" onSubmit={handleSubmit}>
-      <button className="search-form-icon">
+      <button className="search-form-icon nomination">
         <i className="fa fa-search"></i>
       </button>
       <input
