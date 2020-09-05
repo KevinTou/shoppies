@@ -296,8 +296,71 @@ body {
   /* background-color: #7d1c34; */
 }
 
+.nominations-footer-mobile {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  padding: 2rem;
+  background-color: white;
+}
+
+.nominations-footer-mobile-display-wrapper {
+  text-align: center;
+}
+
+.nominations-footer-mobile-display-note {
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.nominations-footer-mobile-display {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.nominations-footer-mobile-nominations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 70vh;
+}
+
+.mobile-wrapper {
+  height: 150px;
+  width: 115px;
+  margin-bottom: 1rem;
+}
+
+.mobile-detail {
+}
+
+.mobile-image {
+  height: 100%;
+  max-width: 107px;
+}
+
+.mobile-button {
+  height: 150px;
+  width: 115px;
+  border: none;
+  background-color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 600px) {
   .footer-nominations-container {
-    height: 300px; /*Fix this*/
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-nominations {
+    display: none;
   }
 }

@@ -35,7 +35,7 @@ const MovieContainer = ({ movies }) => {
   };
 
   return (
-    <Swiper {...params}>
+    <Swiper {...params} style={{ zIndex: 0 }}>
       {movies.length > 0 ? (
         movies.map((movie) => (
           <SwiperSlide key={movie.imdbID}>

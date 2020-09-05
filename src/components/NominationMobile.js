@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { removeNomination } from '../actions';
 
-const Nomination = ({ nomination, removeNomination }) => {
+const NominationMobile = ({ nomination, removeNomination }) => {
   const [displayTitle, setDisplayTitle] = useState(false);
 
   const handleClick = (e) => {
@@ -22,13 +22,13 @@ const Nomination = ({ nomination, removeNomination }) => {
   return (
     <>
       <div
-        className="movie-detail-wrapper"
+        className="mobile-wrapper"
         onMouseEnter={showTitle}
         onMouseLeave={removeTitle}
         onClick={handleClick}
       >
         {displayTitle ? (
-          <div className="movie-detail nomination">
+          <div className="mobile-detail">
             <h3>{nomination.Title}</h3>
             <p style={{ marginTop: '.3rem' }}>({nomination.Year})</p>
           </div>
@@ -40,7 +40,7 @@ const Nomination = ({ nomination, removeNomination }) => {
                 : nomination.Poster
             }
             alt={nomination.Title}
-            className="movie-detail-image nomination"
+            className="mobile-image"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = 'https://i.stack.imgur.com/yZlqh.png';
@@ -52,4 +52,4 @@ const Nomination = ({ nomination, removeNomination }) => {
   );
 };
 
-export default connect(null, { removeNomination })(Nomination);
+export default connect(null, { removeNomination })(NominationMobile);
