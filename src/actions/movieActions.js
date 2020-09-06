@@ -69,3 +69,9 @@ export const searchMovies = (query) => async (dispatch) => {
     dispatch({ type: SEARCH_MOVIES_ERROR, payload: err });
   }
 };
+
+export const CLEAR_SEARCH = 'CLEAR_SEARCH';
+
+export const clearSearch = () => (dispatch) => {
+  dispatch({ type: CLEAR_SEARCH });
+};

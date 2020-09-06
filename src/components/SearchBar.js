@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { searchMovies } from '../actions';
+import { searchMovies, clearSearch } from '../actions';
 
-const SearchBar = ({ searchMovies }) => {
+const SearchBar = ({ searchMovies, clearSearch }) => {
   const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    const debounceSearch = setTimeout(() => {
+      searchMovies(search);
+
+      if (search === '') {
+        clearSearch();
+      }
+    }, 500);
+
+    return () => clearTimeout(debounceSearch);
+  }, [search, searchMovies, clearSearch]);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -33,4 +45,4 @@ const SearchBar = ({ searchMovies }) => {
   );
 };
 
-export default connect(null, { searchMovies })(SearchBar);
+export default connect(null, { searchMovies, clearSearch })(SearchBar);

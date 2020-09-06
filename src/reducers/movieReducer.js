@@ -6,6 +6,7 @@ import {
   SEARCH_MOVIES_SUCCESS,
   SEARCH_MOVIES_ERROR,
   REMOVE_ALL_NOMINATIONS,
+  CLEAR_SEARCH,
 } from '../actions';
 
 const initialState = {
@@ -22,6 +23,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         isLoading: true,
+        error: null,
       };
     case SEARCH_MOVIES_SUCCESS:
       return {
@@ -34,6 +36,11 @@ export default function (state = initialState, action) {
         ...state,
         error: action.payload,
         isLoading: false,
+      };
+    case CLEAR_SEARCH:
+      return {
+        ...state,
+        movies: [],
       };
     case NOMINATE_MOVIE:
       return {
