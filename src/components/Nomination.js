@@ -41,10 +41,10 @@ const Nomination = ({ nomination, removeNomination }) => {
             }
             alt={nomination.Title}
             className="movie-detail-image nomination"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = 'https://i.stack.imgur.com/yZlqh.png';
-            }}
+            // onError={(e) => {
+            //   e.target.onerror = null;
+            //   e.target.src = 'https://i.stack.imgur.com/yZlqh.png';
+            // }}
           />
         )}
       </div>

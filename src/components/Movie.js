@@ -50,10 +50,10 @@ const Movie = ({ movie, nominations, nominateMovie }) => {
             src={movie.image ? URL.createObjectURL(movie.image) : movie.Poster}
             alt={movie.Title}
             className="movie-detail-image"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = 'https://i.stack.imgur.com/yZlqh.png';
-            }}
+            // onError={(e) => {
+            //   e.target.onerror = null;
+            //   e.target.src = 'https://i.stack.imgur.com/yZlqh.png';
+            // }}
           />
         )}
       </div>
