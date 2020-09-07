@@ -1,4 +1,4 @@
-# <h1 name="top">The Shoppies</h1>
+# <div style="font-size: 1rem; display: flex; justify-content: space-between; align-items: center"><h1 name="top">The Shoppies</h1><p>[Top](#top)</p></div>
 
 <img src="https://i.imgur.com/XbwbhcD.png" alt="The Shoppies">
 
@@ -17,7 +17,7 @@ This project was based on a challenge, given as an alternative to submitting a p
 5. [Known Bugs](#bugs)
 6. [Third-Party Libraries (and Considerations)](#libraries)
 
-### <h3 name="challenge">The Challenge :movie_camera:</h3>
+### <div style="font-size: 1rem; display: flex; justify-content: space-between; align-items: center"><h3 name="challenge">The Challenge :movie_camera:</h3><p>[Top](#top)</p></div>
 
 **Web Developer Internship Challenge** - [Google Doc](https://docs.google.com/document/d/1AZO0BZwn1Aogj4f3PDNe1mhq8pKsXZxtrG--EIbP_-w/edit#heading=h.31w9woubunro)
 
@@ -37,7 +37,7 @@ More explicitly, the **technical requirements** were:
 5. If a search result has already been nominated, disable its nominate button.
 6. Display a banner when the user has 5 nominations.
 
-### <h3 name="installation">Installation :floppy_disk:</h3>
+### <div style="font-size: 1rem; display: flex; justify-content: space-between; align-items: center"><h3 name="installation">Installation :floppy_disk:</h3><p>[Top](#top)</p></div>
 
 **\*Note\*** - Request a **free OMDb API key** at: [API Key Sign Up](http://www.omdbapi.com/apikey.aspx), otherwise the application will not work.
 
@@ -47,7 +47,7 @@ More explicitly, the **technical requirements** were:
 4. Run `npm install` to install the dependencies
 5. Run `npm start` to launch a local instance of the application
 
-### <h3 name="journey" style="display: inline-block; width: 95%">The Journey :airplane:</h3><span style="text-align: right">[Top](#top)</span>
+### <div style="font-size: 1rem; display: flex; justify-content: space-between; align-items: center"><h3 name="journey">The Journey :airplane:</h3><p>[Top](#top)</p></div>
 
 The challenge sounded easy enough after reading the specifications but I found out that there were quite a few complications that came from using the API and designing the application.
 
@@ -59,7 +59,7 @@ Another few issues I had with the API was the fact that it had duplicate data wi
 
 There are a few other features I would like to include and will continue to update as time permits, one utilizing an open source library built by Shopify called `Draggable`. This will most likely be a work-in-progress because changing into a drag-and-drop creates a different user experience and will need futher research for design and implementation.
 
-### <h3 name="todo">List of Things To Do :memo:</h3>
+### <div style="font-size: 1rem; display: flex; justify-content: space-between; align-items: center"><h3 name="todo">List of Things To Do :memo:</h3><p>[Top](#top)</p></div>
 
 - [ ] Incorporate fuzzy/auto-complete search
 - [ ] Add a sharing feature (i.e. links)
@@ -71,12 +71,12 @@ There are a few other features I would like to include and will continue to upda
 - [ ] Incorporate drag-and-drop feature to add/remove nominations
 - [ ] Optimize database requests
 
-### <h3 name="bugs">Known Bugs :no_entry_sign:</h3>
+### <div style="font-size: 1rem; display: flex; justify-content: space-between; align-items: center"><h3 name="bugs">Known Bugs :no_entry_sign:</h3><p>[Top](#top)</p></div>
 
 :x: Confetti component (from `react-dom-confetti`) stretches window size which creates white-space until the animation finishes
 :x: The input and the icon for the search bar can be a pixel or two off on mobile
 
-### <h3 name="libraries">Third-Party Libraries (and Considerations) :books:</h3>
+### <div style="font-size: 1rem; display: flex; justify-content: space-between; align-items: center"><h3 name="libraries">Third-Party Libraries (and Considerations) :books:</h3><p>[Top](#top)</p></div>
 
 Third-Party Libraries Used:
 
