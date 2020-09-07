@@ -293,10 +293,6 @@ body {
   font-weight: bold;
 }
 
-.footer-nominations-button-remove:hover {
-  /* background-color: #7d1c34; */
-}
-
 .nominations-footer-mobile {
   z-index: 1000;
   position: fixed;
@@ -337,9 +333,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.mobile-detail {
-}
-
 .mobile-image {
   height: 100%;
   max-width: 107px;
@@ -364,4 +357,33 @@ body {
   .footer-nominations {
     display: none;
   }
+}
+
+/* BANNER */
+.nominations-banner {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 1s;
+  animation-name: slideDown;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-60px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.nominations-banner-details {
+  font-weight: bold;
 }
