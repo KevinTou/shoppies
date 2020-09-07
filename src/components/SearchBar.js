@@ -40,6 +40,7 @@ const SearchBar = ({ searchMovies, clearSearch }) => {
         value={search}
         onChange={handleChange}
         placeholder="Search for a movie..."
+        autoFocus
       />
     </form>
   );
