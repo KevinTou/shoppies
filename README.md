@@ -47,7 +47,7 @@ More explicitly, the **technical requirements** were:
 4. Run `npm install` to install the dependencies
 5. Run `npm start` to launch a local instance of the application
 
-### <h3 name="journey">The Journey :airplane:</h3>
+### <h3 name="journey" style="display: inline-block; width: 95%">The Journey :airplane:</h3><span style="text-align: right">[Top](#top)</span>
 
 The challenge sounded easy enough after reading the specifications but I found out that there were quite a few complications that came from using the API and designing the application.
 
