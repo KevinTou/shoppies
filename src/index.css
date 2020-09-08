@@ -357,6 +357,12 @@ body {
   }
 }
 
+@media screen and (min-height: 870px) {
+  .movie-detail-image.nomination {
+    height: 100%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .footer-nominations {
     display: none;
