@@ -397,3 +397,7 @@ body {
 .nominations-banner-details {
   font-weight: bold;
 }
+
+.close {
+  display: none;
+}
